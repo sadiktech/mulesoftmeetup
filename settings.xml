@@ -10,7 +10,7 @@ https://maven.apache.org/xsd/settings-1.0.0.xsd">
         <server>
             <id>anypoint-exchange-v2</id>
             <username>sadik12</username>
-            <password>Com@1357</password>
+            <password>XXXX</password>
         </server>
         <server>
             <id>mulesoft-releases</id>
