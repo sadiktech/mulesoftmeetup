@@ -1,0 +1,30 @@
+version: 0.2
+env:
+  variables:
+    JAVA_HOME: "/usr/lib/jvm/java-8-openjdk-amd64"
+    MULE_ENV: "/CodeBuild/mule-env"
+    PASSWORD: "/CodeBuild/password"
+  parameter-store:
+    MULE_KEY: /test/mulesoft/MULE_KEY
+phases:
+  pre_build:
+    commands:
+      - cp ./mulesoftmeetup/settings.xml /root/.m2/settings.xml
+      - echo Tests phase initiated...
+      - cd mulesoftmeetup/
+      - mvn clean test #-Dmule.env=$MULE_ENV -Dmule.key=$MULE_KEY
+  build:
+    commands:
+      - echo Build package started on `date`      
+      - mvn package -DskipTests#-Dmule.env=$MULE_ENV -Dmule.key=$MULE_KEY -DskipTests
+  post_build:
+    commands:
+      - echo Deploy started on `date`
+      - mvn deploy -DmuleDeploy -DskipTests #-Dmule.env=$MULE_ENV -Dmule.key=$MULE_KEY -Dworkers=$WORKERS -DworkerType=$WORKER_TYPE -Denvironment=$ENVIRONMENT -Dusername=$USERNAME -Dpassword=$PASSWORD -DappName=$APP_NAME -DbusinessGroup=$BUSINESS_GROUP -DbusinessGroupId=$BUSINESS_GROUP_ID -Dregion=$REGION -DskipTests
+artifacts:
+  files:
+  - target/*.jar
+  discard-paths: yes
+cache:
+  paths:
+  - '/root/.m2/**/*'
