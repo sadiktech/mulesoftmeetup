@@ -46,7 +46,7 @@
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>${app.runtime}</muleVersion>
 						<username>sadik12</username>
-						<password>Com@1357</password>
+						<password>XXXXX</password>
 						<!-- <businessGroup>${businessGroup}</businessGroup> -->
 						<workers>1</workers>
 						<workerType>Micro</workerType>
