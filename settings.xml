@@ -15,17 +15,17 @@ https://maven.apache.org/xsd/settings-1.0.0.xsd">
         <server>
             <id>mulesoft-releases</id>
             <username>sadik12</username>
-            <password>Com@1357</password>
+            <password>XXXXXX</password>
         </server>
 		<server>
             <id>Exchange3</id>
             <username>sadik12</username>
-            <password>Com@1357</password>
+            <password>XXXXXX</password>
         </server>
 		<server>
             <id>Exchange4</id>
             <username>sadik12</username>
-            <password>Com@1357</password>
+            <password>XXXXXX</password>
         </server>
     </servers>
     <pluginGroups>
@@ -81,42 +81,7 @@ https://maven.apache.org/xsd/settings-1.0.0.xsd">
                     </snapshots>
                 </repository>
             </repositories>
-        </profile>
-       <!-- <profile>
-            <repositories>
-                <repository>
-                    <snapshots>
-                        <enabled>false</enabled>
-                    </snapshots>
-                    <id>central</id>
-                    <name>libs-release</name>
-                    <url>http://jaxblackbox1.crowley.com:8081/artifactory/libs-release</url>
-                </repository>
-                <repository>
-                    <snapshots />
-                    <id>snapshots</id>
-                    <name>libs-snapshot</name>
-                    <url>http://jaxblackbox1.crowley.com:8081/artifactory/libs-snapshot</url>
-                </repository>
-            </repositories>
-            <pluginRepositories>
-                <pluginRepository>
-                    <snapshots>
-                        <enabled>false</enabled>
-                    </snapshots>
-                    <id>central</id>
-                    <name>plugins-release</name>
-                    <url>http://jaxblackbox1.crowley.com:8081/artifactory/plugins-release</url>
-                </pluginRepository>
-                <pluginRepository>
-                    <snapshots />
-                    <id>snapshots</id>
-                    <name>plugins-snapshot</name>
-                    <url>http://jaxblackbox1.crowley.com:8081/artifactory/plugins-snapshot</url>
-                </pluginRepository>
-            </pluginRepositories>
-            <id>artifactory</id>
-        </profile>-->
+        </profile>       
     </profiles>
     <activeProfiles>
         <activeProfile>artifactory</activeProfile>
